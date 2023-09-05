@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+
+}
+body{
+    display: flex;
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 20vh;   
+}
+main{
+    
+}
+footer{
+    position: absolute;
+}
