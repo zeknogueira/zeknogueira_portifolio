@@ -4,6 +4,7 @@
 }
 body{
     display: flex;
+    flex-direction: column;
 
 }
 header{
@@ -15,5 +16,7 @@ main{
     
 }
 footer{
-    position: absolute;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
