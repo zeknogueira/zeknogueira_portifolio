@@ -1,21 +1,30 @@
-*{
+* {
     margin: 0;
 
 }
-body{
+body {
+    
     display: flex;
     flex-direction: column;
 
 }
-header{
+
+header {
     display: flex;
     flex-direction: row;
-    height: 20vh;   
+    height: 20vh;
 }
-main{
-    
+#principal_nav{
+    flex-direction: row;
+    justify-content: flex-end;
 }
-footer{
+
+main {
+    flex-direction: column;
+    height: 75vh;
+}
+
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
