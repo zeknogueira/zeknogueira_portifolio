@@ -1,0 +1,26 @@
+#title_articles_box{
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    width: 100vw;
+    
+
+}
+
+#article_title_blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+div{
+    display: flex;
+}
+#main_blog_principal_box{
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 50vh;
+    background-color: aqua;
+    
+}

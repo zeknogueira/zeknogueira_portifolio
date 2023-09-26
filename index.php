@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php
-require_once "conection.php"
-?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/blog.css">
     <title>Zek Nogueira</title>
 </head>
 
-<body class="white_body_blog">
-    <header id="small_header">
-        <div id="logo_blog">
-            <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+<body>
+    <header>
+        <div id="logo">
+            <h1>ZEK</h1>
         </div>
         <div id="menu">
             <nav id="principal_nav">
@@ -27,21 +24,11 @@ require_once "conection.php"
         </div>
 
     </header>
-    <main id="white_main_blog">
-        <div id="title_articles_box">
-        <h1 id="article_title_blog">Artigos</h1>
-        </div>
-        <div id="main_blog_principal_box">
-        <div id="main_blog_principal">
-            <section  id="articles_section">
-                <article class="principal_articles" id="article_1">
-
-                </article>
-                <article class="principal_articles" id="article_2">
-
-                </article>
-            </section>
-        </div>
+    <main>
+        <div id="principal">
+            <p id="my_name_is">Olá, meu nome é</p>
+            <h1 id="name">Zek Nogueira</h1>
+            <h2 id="dev_web">Desenvolvedor Web</h2>
         </div>
 
     </main>
@@ -49,7 +36,7 @@ require_once "conection.php"
         <div>
             <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="index.html">Zek Nogueira</a></p>
         </div>
-
+        
     </footer>
 
 </body>
