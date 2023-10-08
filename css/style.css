@@ -75,6 +75,7 @@ div {
 }
 
 #menu {
+    
     justify-content: right;
     margin-top: 20px;
     margin-right: 40px;
@@ -95,13 +96,7 @@ div {
     color: #42f584;
 }
 
-#white_main_blog {
-    display: flex;
-    background-color: white;
-    flex-direction: column;
-    min-height: 80vh;
-    justify-content: center;
-}
+
 
 #small_header {
     background-color: #0F381E;
