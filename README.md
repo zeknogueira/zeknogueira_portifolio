@@ -1,2 +1,2 @@
-# zeknogueira_portfolio
-Personal Portifolio Site Project  
+# zeknogueira_personal_blog_and_portfolio
+Personal blog and portifolio site project   
