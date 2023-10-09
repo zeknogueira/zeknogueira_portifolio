@@ -1,2 +1,2 @@
 # zeknogueira_portifolio
-Projeto de site para portifólio 
+Personal Portifolio Site Project  
