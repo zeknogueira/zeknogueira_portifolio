@@ -39,11 +39,12 @@ require_once "conection.php"
     <main>
         <div class="principal_login_box">
             <section id="margin_login_box">
-                <form action="">
+                <form action="login_process.php" method="POST">
                     <label for="user_email">User Email:</label>
-                    <input type="email" name="user_email" id="user_email">
+                    <input type="email" name="email" id="user_email">
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password">
+                    <input type="submit" name="button-submit" id="button_submit_blog_login" value="Entrar">
                 </form>
             </section>
         </div>
