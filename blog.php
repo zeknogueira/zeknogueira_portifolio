@@ -17,7 +17,9 @@ require_once "conection.php"
 <body class="white_body_blog">
     <header id="small_header">
         <div id="logo_blog">
-            <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+            <a href="index.php">
+                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+            </a>
         </div>
 
 

@@ -17,14 +17,16 @@ require_once "conection.php"
 <body class="white_body_blog">
     <header id="small_header">
         <div id="logo_blog">
-            <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+            <a href="index.php">
+                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+            </a>
         </div>
 
 
         <div id="menu">
 
             <nav id="principal_nav">
-                <a href="login.php"><button class="login_button">Login</button></a>
+                <a href="login.php"><button class="pointer_buttons login_button">Login</button></a>
                 <a href="blog.php">Blog</a>
                 <a href="contato.html">Contato</a>
                 <a href="Projetos">Projetos</a>
@@ -40,15 +42,17 @@ require_once "conection.php"
                     <form action="login_process.php" method="POST" class="form_global_config">
 
                         <div>
-                            <label for="user_email">User Email:</label>
+                            <label for="user_email">Email:</label>
                             <input type="email" name="user_email" id="email">
                         </div>
                         <div>
-                            <label for="user_password">Password:</label>
+                            <label for="user_password">Senha:</label>
                             <input type="password" name="user_password" id="password">
                         </div>
-                        <input type="submit" name="button_submit" id="button_submit_blog_login" value="Entrar">
-
+                        <div class="input_submit_div">
+                            <input type="submit" name="button_submit"
+                                class="pointer_buttons button_submit_blog_login_sign_up" value="Entrar">
+                        </div>
                     </form>
                 </div>
                 <div id=box_hr_division_sign_up>
@@ -56,7 +60,8 @@ require_once "conection.php"
                 </div>
                 <div id="sign_up_section">
                     <h2 id="are_not_you_signed_question">Não é cadastrado?</h2>
-                    <a href="sign_up.php"><button  id="sign_up_button_login_page">Cadastre-se</button></a>
+                    <a href="sign_up.php"><button class="pointer_buttons"
+                            id="sign_up_button_login_page">Cadastre-se</button></a>
                 </div>
 
             </section>
