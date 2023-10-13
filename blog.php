@@ -10,6 +10,7 @@ require_once "conection.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Zek Nogueira</title>
 </head>
 
@@ -23,11 +24,7 @@ require_once "conection.php"
         <div id="menu">
 
             <nav id="principal_nav">
-                <a href="login.php">
-                    <div class="buttom_login_box">
-                        <button>Login</button>
-                    </div>
-                </a>
+                <a href="login.php"><button class="login_button">Login</button></a>
                 <a href="blog.php">Blog</a>
                 <a href="contato.html">Contato</a>
                 <a href="Projetos">Projetos</a>
