@@ -52,11 +52,16 @@ div {
     margin-bottom: 10px;
 }
 #logo_blog{
+    flex-direction: column;
+    width: 20vw;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-family: Urbanist;
+    font-weight: 500;
+    color: #31b561;
+    font-size: 2rem;
     height: 100%;
     align-items: center;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
     margin-top: 30px;
 }
 #logo_blog div{
@@ -118,18 +123,6 @@ div {
     width: 100vw;
     justify-content: space-between;
 
-}
-
-#logo_blog {
-    flex-direction: column;
-    width: 20vw;
-    justify-content: end;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    font-family: Urbanist;
-    font-weight: 500;
-    color: #31b561;
-    font-size: 2rem;
 }
 
 #principal {

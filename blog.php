@@ -42,24 +42,21 @@ require_once "conection.php"
         <div id="main_blog_principal_box">
             <div id="main_blog_principal">
                 <section class="articles_section">
-                    <article class="principal_articles" id="article_1">
-                        <h2>Article 1</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nemo aliquid velit
-                            consequatur, autem dicta officia doloribus odio dolorem ratione fugit illum accusantium modi
-                            unde, voluptas eaque qui magnam! Animi?Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Voluptatibus nobis labore hic mollitia praesentium porro officia, atque id accusamus
-                            consequuntur blanditiis maiores placeat doloremque aliquam fuga expedita quisquam sed
-                            similique!Loremlorem
-                        </p>
-                    </article>
-                    <hr class="articles_line_division">
-                    <article class="principal_articles" id="article_2">
-                        <h2>Article 3</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates aliquam officia
-                            explicabo illo non necessitatibus minus natus, magni vel fugit. Blanditiis eos mollitia, et
-                            vel aliquam dolor itaque voluptate cupiditate!</p>
-                    </article>
+                    <?php
+                    require "conection.php";
+                    $sql = "select * from articles";
+                    $query_sql_select_articles = $conection_db->query($sql);
+                    if ($query_sql_select_articles->num_rows > 0) {
+                        while ($info_articles = $query_sql_select_articles->fetch_assoc()) {
 
+                            ?>
+                            <article class="principal_articles" id="article_1">
+                                <h2><?php echo $info_articles["article_name"]; ?></h2>
+                                <p><?php echo $info_articles["article_description"]?></p>
+                            </article>
+                            <hr class="articles_line_division">
+                        <?php }
+                    } ?>
                 </section>
 
             </div>
@@ -69,7 +66,7 @@ require_once "conection.php"
             <aside id="main_blog_side">
                 <section class="articles_section">
                     <article class="side_articles" id="article_2">
-                        <h3>Article 2</h3>
+                        <h3>article 3</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates aliquam officia
                             explicabo
                             illo non necessitatibus minus natus, magni vel fugit. Blanditiis eos mollitia, et vel
@@ -97,5 +94,4 @@ require_once "conection.php"
     </footer>
 
 </body>
-
 </html>
