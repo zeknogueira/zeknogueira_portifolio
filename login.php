@@ -18,7 +18,7 @@ require_once "conection.php"
     <header id="small_header">
         <div id="logo_blog">
             <a href="index.php">
-                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+                <h1>ZEK<span id="zek_logo_blog">/login</span></h1>
             </a>
         </div>
 

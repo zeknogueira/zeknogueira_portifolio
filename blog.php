@@ -18,7 +18,7 @@ require_once "conection.php"
     <header id="small_header">
         <div id="logo_blog">
             <a href="index.php">
-                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
+                <h1>ZEK</h1>
             </a>
         </div>
 
@@ -35,12 +35,12 @@ require_once "conection.php"
         </div>
 
     </header>
-    <main id="white_main_blog">
-        <div id="title_articles_box">
-            <h1 id="article_title_blog">Articles</h1>
+    <main class="white_main_blog">
+        <div class="title_articles_box">
+            <h1 class="article_title_blog">Artigos</h1>
         </div>
-        <div id="main_blog_principal_box">
-            <div id="main_blog_principal">
+        <div class="main_blog_principal_box">
+            <div class="main_blog_principal">
                 <section class="articles_section">
                     <?php
                     require "conection.php";
@@ -50,10 +50,20 @@ require_once "conection.php"
                         while ($info_articles = $query_sql_select_articles->fetch_assoc()) {
 
                             ?>
-                            <article class="principal_articles" id="article_1">
-                                <h2><?php echo $info_articles["article_name"]; ?></h2>
-                                <p><?php echo $info_articles["article_description"]?></p>
-                            </article>
+                            <a href="article.php?article_id=<?php echo $info_articles["article_id"] ?>" cursor="pointer">
+                                <article class="principal_articles" id="article">
+                                    <h2>
+                                        <?php echo $info_articles["article_name"]; ?>
+                                    </h2>
+                                    <h3>
+                                        <?php echo $info_articles["article_date"]; ?>
+                                    </h3>
+                                    <p>
+                                        <?php echo $info_articles["article_description"] ?>
+                                    </p>
+                                </article>
+                            </a>
+
                             <hr class="articles_line_division">
                         <?php }
                     } ?>
@@ -65,21 +75,23 @@ require_once "conection.php"
             </div>
             <aside id="main_blog_side">
                 <section class="articles_section">
-                    <article class="side_articles" id="article_2">
-                        <h3>article 3</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates aliquam officia
-                            explicabo
-                            illo non necessitatibus minus natus, magni vel fugit. Blanditiis eos mollitia, et vel
-                            aliquam
-                            dolor itaque voluptate cupiditate!</p>
-                    </article>
-                    <article class="side_articles" id="article_2">
-                        <h3>Article 4</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates aliquam officia
-                            explicabo
-                            illo non necessitatibus minus natus, magni vel fugit. Blanditiis eos mollitia, et vel
-                            aliquam
-                            dolor itaque voluptate cupiditate!</p>
+                    <article class="side_articles">
+                        <h2>Recentes</h2>
+                        <?php
+                        $sql_select_recent_articles = "SELECT * FROM articles ORDER BY article_date LIMIT 2";
+                        $query_result = $conection_db->query($sql_select_recent_articles);
+                        if ($query_result->num_rows > 0) {
+                            while ($info_recent_articles = $query_result->fetch_assoc()) { ?>
+
+                                <h3>
+                                    <?php echo $info_recent_articles["article_name"] ?>
+                                </h3>
+                                <p class="article_p">
+                                    <?php echo $info_recent_articles["article_description"] ?>
+                                </p>
+                            </article>
+                        <?php }
+                        } ?>
                     </article>
                 </section>
             </aside>
@@ -94,4 +106,5 @@ require_once "conection.php"
     </footer>
 
 </body>
+
 </html>

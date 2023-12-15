@@ -54,15 +54,13 @@ div {
 #logo_blog{
     flex-direction: column;
     width: 20vw;
-    margin-left: 50px;
-    margin-bottom: 10px;
     font-family: Urbanist;
     font-weight: 500;
     color: #31b561;
     font-size: 2rem;
     height: 100%;
+    justify-content:  center;
     align-items: center;
-    margin-top: 30px;
 }
 #logo_blog div{
     width: 20vw;
@@ -121,7 +119,9 @@ div {
     flex-direction: row;
     height: 8vh;
     width: 100vw;
-    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    
 
 }
 
@@ -146,7 +146,7 @@ div {
     font-weight: 500;
 }
 
-#footer_blog_principal {
+#footer_blog_principal{
     background-color: #0F381E;
     display: flex;
     height: 40px;
@@ -157,5 +157,4 @@ div {
     justify-content: center;
     align-items: center;
     width: 100vw;
-
 }

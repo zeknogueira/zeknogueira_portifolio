@@ -1,14 +1,14 @@
 
 
-#title_articles_box{
+.title_articles_box{
     display: flex;
     flex-direction: column;
     height: 30px;
-    width: 100vw;
+    width: 100%;
     
 
 }
-#white_main_blog {
+.white_main_blog {
     display: flex;
     background-color: white;
     flex-direction: column;
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
 }
-#article_title_blog{
+.article_title_blog{
     margin: 2% 2%;
     display: flex;
     flex-direction: row;
@@ -26,7 +26,7 @@
 div{
     display: flex;
 }
-#main_blog_principal_box{
+.main_blog_principal_box{
     display: flex;
     flex-direction: row;
     width: 80vw;
@@ -35,7 +35,7 @@ div{
     justify-content: space-between;
     
 }
-#main_blog_principal{
+.main_blog_principal{
     
     width: 78%;
     display: flex;
@@ -58,7 +58,7 @@ div{
 .articles_section article h2, h3{
     color: #20753F;
 }
-.articles_section article p{
+.articles_section .article_p{
     color: black;
 }
 
