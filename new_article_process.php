@@ -4,12 +4,14 @@ require_once "conection.php";
 // ...
 $article_name = $_POST["article_name"];
 $article_description = $_POST["article_description"];
+$article_content = $_POST["article_content_text_area"];
+echo ($article_content);
 
-$sql = "INSERT into articles (article_name, article_description) values (?,?)";
+$sql = "INSERT into articles (article_name, article_description, article_content) values (?,?,?)";
 
 $stmt = $conection_db->prepare($sql);
 if ($stmt) {
-    $stmt->bind_param("ss", $article_name, $article_description);
+    $stmt->bind_param("sss", $article_name, $article_description, $article_content);
     
     if ($stmt->execute()) {
         $stmt->close();

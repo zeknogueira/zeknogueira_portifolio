@@ -48,7 +48,7 @@ require_once "conection.php"
                 <input type="text" id="article_description" name="article_description" placeholder="Descrição do Artigo"
                     required>
                     <label for="article_content">Contéudo</label>
-                <textarea name="article_content" class="article_content_text_area" cols="30" rows="20" placeholder="Conteúdo do Artigo">
+                <textarea name="article_content_text_area" class="article_content_text_area" cols="30" rows="20" placeholder="Conteúdo do Artigo">
 
                         </textarea>
                 <div class="button_submit_box">
