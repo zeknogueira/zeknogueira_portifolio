@@ -31,6 +31,7 @@ div{
     flex-direction: row;
     width: 80vw;
     min-height: 50vh;
+    
    
     justify-content: space-between;
     
@@ -40,6 +41,8 @@ div{
     width: 78%;
     display: flex;
     flex-direction: column;
+    background-color: rgba(227, 226, 226, 0.56);
+    border-radius: 10px;
 
 }
 #main_blog_side{
@@ -85,4 +88,17 @@ div{
 }
 .principal_articles{
     min-height: 30vh;
+}
+
+.article_text{
+    font-size: 15px;
+}
+
+.article_description{
+    font-size: 20px;
+}
+
+.space_between_header_articles{
+    width: 100%;
+    height: 10vh;
 }

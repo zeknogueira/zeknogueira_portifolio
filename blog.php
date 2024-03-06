@@ -36,8 +36,8 @@ require_once "conection.php"
 
     </header>
     <main class="white_main_blog">
-        <div class="title_articles_box">
-            <h1 class="article_title_blog">Artigos</h1>
+        <div id="space_between_header_articles">
+
         </div>
         <div class="main_blog_principal_box">
             <div class="main_blog_principal">

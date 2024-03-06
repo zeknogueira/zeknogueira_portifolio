@@ -56,14 +56,14 @@ require_once "conection.php"
                     </div>
                     <section class="articles_section">
                         <article class="article_basic">
-                            
+                           <div class="article_description"> 
                             <h3>
                                 <?php echo $info_article_selected["article_description"]; ?>
                             </h3>
-                            <h3>
+                            <h3 >
                                 <?php echo $info_article_selected["article_date"]; ?>
                             </h3>
-                            <p>
+                            <p class="article_text">
                                 <?php echo $info_article_selected["article_content"]; ?>
                             </p>
                         </article>
