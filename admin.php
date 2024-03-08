@@ -87,7 +87,7 @@ require_once "conection.php"
 
                         }
                     }
-
+                  
                     ?>
                 </tbody>
             </table>

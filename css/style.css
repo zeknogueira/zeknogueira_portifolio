@@ -118,7 +118,7 @@ div {
     display: flex;
     flex-direction: row;
     height: 8vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     padding: 0;
     
@@ -147,6 +147,7 @@ div {
 }
 
 #footer_blog_principal{
+    z-index: 2;
     background-color: #0F381E;
     display: flex;
     height: 40px;
@@ -156,5 +157,5 @@ div {
     left: 0;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }

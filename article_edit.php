@@ -62,6 +62,14 @@ require_once "conection.php"
                     <input type="text" id="article_description" name="article_description"
                         placeholder="<?php echo $row_a['article_description']; ?>"
                         value="<?php echo $row_a['article_description']; ?>" required>
+                    <label for="article_categories_options"></label>
+
+                    <select name="article_categories_options" id="article_categories_options">
+                        <option value="informatica">Informática</option>
+                        <option value="educacao" autofocus>Educação</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+
                     <label for="article_content_text_area">Conteúdo</label>
                     <textarea name="article_content_text_area" class="article_content_text_area" cols="30" rows="20"
                         placeholder="<?php echo $row_a['article_content']; ?>">
