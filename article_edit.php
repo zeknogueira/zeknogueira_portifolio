@@ -26,11 +26,10 @@ require_once "conection.php"
         <div id="menu">
 
             <nav id="principal_nav">
-                <a href="login.php"><button class="login_button">Login</button></a>
+
                 <a href="blog.php">Blog</a>
-                <a href="contato.html">Contato</a>
-                <a href="Projetos">Projetos</a>
-                <a href="curriculo.html">Curriculo</a>
+                <a href="index.php">Serviços</a>
+                <a href="login.php"><button class="enter_button">Entrar</button></a>
             </nav>
         </div>
 
@@ -64,7 +63,7 @@ require_once "conection.php"
                         value="<?php echo $row_a['article_description']; ?>" required>
                     <label for="article_categories_options">Categoria:</label>
 
-                    <select name="articles_categories_options" >
+                    <select name="articles_categories_options">
                         <option value="Informática">Programação</option>
                         <option value="Música">Música</option>
                         <option value="Marketing">Marketing</option>

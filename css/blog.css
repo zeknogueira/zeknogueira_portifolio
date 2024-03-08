@@ -113,6 +113,10 @@ div{
     height: 2vh;
 }
 
+.space_between_side_box{
+    width: 100%;
+    height: 7vh;
+}
 
 .principal_articles_tittle{
     font-size: 22px;
@@ -160,4 +164,32 @@ div{
 .side_articles_description{
     font-size: 14px;
     color: gray;
+    margin-bottom: 2vh;
+}
+
+.enter_button{
+    background-color: #0ded5f;
+    font-family: Urbanist;
+    font-weight: 700;
+    border: none;
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-content: center;
+}
+
+.articles_categories_nav{
+    display: flex;
+    flex-direction: column !important;
+    min-height: 18vh;
+    justify-content: space-between;
+}
+
+.articles_categories_nav a{
+
+    font-size: 16px;
+    color: #20753F;
+    font-weight: bold;
+    margin-bottom: 0.7vh;
 }

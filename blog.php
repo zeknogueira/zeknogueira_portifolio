@@ -26,11 +26,10 @@ require_once "conection.php"
         <div id="menu">
 
             <nav id="principal_nav">
-                <a href="login.php"><button class="login_button">Login</button></a>
-                <a href="blog.php">Blog</a>
-                <a href="contato.html">Contato</a>
-                <a href="Projetos">Projetos</a>
-                <a href="curriculo.html">Curriculo</a>
+
+                <a href="blog.php"  class="nav_a_page_selected">Blog</a>
+                <a href="index.php">Serviços</a>
+                <a href="login.php"><button class="enter_button">Entrar</button></a>
             </nav>
         </div>
 
@@ -104,6 +103,29 @@ require_once "conection.php"
                                     </div>
                                 <?php }
                             } ?>
+                        </div>
+                    </div>
+                </section>
+                <div class="space_between_side_box"></div>
+                <section class="side_articles_section" class="side_articles_categories">
+                    <h2>CATEGORIAS</h2>
+                    <div class="side_articles_box_box">
+                        <div class="side_articles_box">
+                            <nav class="articles_categories_nav">
+                                <div>
+                                    <a href="article.php?articles_categories=programacao">Programação</a>
+                                    <hr class="articles_line_division">
+                                </div>
+                                <div>
+                                    <a href="article.php?articles_categories=musica">Música</a>
+
+                                    <hr class="articles_line_division">
+                                </div>
+                                <div>
+                                    <a href="article.php?articles_categories=marketing">Marketing</a>
+                                    <hr class="articles_line_division">
+                                </div>
+                            </nav>
                         </div>
                     </div>
                 </section>

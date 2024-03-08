@@ -26,11 +26,10 @@ require_once "conection.php"
         <div id="menu">
 
             <nav id="principal_nav">
-                <a href="login.php"><button class="pointer_buttons login_button">Login</button></a>
+
                 <a href="blog.php">Blog</a>
-                <a href="contato.html">Contato</a>
-                <a href="Projetos">Projetos</a>
-                <a href="curriculo.html">Curriculo</a>
+                <a href="index.php">Serviços</a>
+                
             </nav>
         </div>
 
