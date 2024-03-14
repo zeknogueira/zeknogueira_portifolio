@@ -45,10 +45,11 @@ require_once "conection.php"
                     require "conection.php";
                     if (isset($_GET['articles_categories'])) {
                         $article_category_sended = $_GET["articles_categories"];
+                        $article_category_sended_upper = mb_strtoupper ($article_category_sended,"utf-8" );
                         ?>
 
                         <h1 class="article_category_tittle">
-                            <?php echo $article_category_sended; ?>
+                            <?php echo $article_category_sended_upper; ?>
                         </h1>
                         <?php
 
@@ -162,11 +163,11 @@ require_once "conection.php"
                         <div class="side_articles_box">
                             <nav class="articles_categories_nav">
                                 <div>
-                                    <a href="blog.php?articles_categories=programacao">Programação</a>
+                                    <a href="blog.php?articles_categories=programação">Programação</a>
                                     <hr class="articles_line_division">
                                 </div>
                                 <div>
-                                    <a href="blog.php?articles_categories=musica">Música</a>
+                                    <a href="blog.php?articles_categories=música">Música</a>
 
                                     <hr class="articles_line_division">
                                 </div>
