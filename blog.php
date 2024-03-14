@@ -17,8 +17,8 @@ require_once "conection.php"
 <body class="white_body_blog">
     <header id="small_header">
         <div id="logo_blog">
-            <a href="index.php">
-                <h1>ZEK</h1>
+            <a href="blog.php">
+                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
             </a>
         </div>
 
@@ -27,7 +27,7 @@ require_once "conection.php"
 
             <nav id="principal_nav">
 
-                <a href="blog.php"  class="nav_a_page_selected">Blog</a>
+                <a href="blog.php" class="nav_a_page_selected">Blog</a>
                 <a href="index.php">Serviços</a>
                 <a href="login.php"><button class="enter_button">Entrar</button></a>
             </nav>
@@ -43,32 +43,81 @@ require_once "conection.php"
                 <section class="articles_section">
                     <?php
                     require "conection.php";
-                    $sql = "select * from articles";
-                    $query_sql_select_articles = $conection_db->query($sql);
-                    if ($query_sql_select_articles->num_rows > 0) {
-                        while ($info_articles = $query_sql_select_articles->fetch_assoc()) {
+                    if (isset($_GET['articles_categories'])) {
+                        $article_category_sended = $_GET["articles_categories"];
+                        ?>
 
-                            ?>
-                            <a href="article.php?article_id=<?php echo $info_articles["article_id"] ?>" cursor="pointer">
-                                <article class="principal_articles" id="article">
-                                    <div class="principal_articles_tittle_date_box">
-                                        <h2 class="principal_articles_tittle">
-                                            <?php echo $info_articles["article_name"]; ?>
-                                        </h2>
-                                        <p class="principal_articles_date">
-                                            <?php echo $info_articles["article_date"]; ?>
-                                        </p>
-                                    </div>
-                                    <div class="principal_articles_description_box">
-                                        <p class="principal_articles_description">
-                                            <?php echo $info_articles["article_description"] ?>
-                                        </p>
-                                    </div>
-                                </article>
-                            </a>
+                        <h1 class="article_category_tittle">
+                            <?php echo $article_category_sended; ?>
+                        </h1>
+                        <?php
 
-                            <hr class="articles_line_division">
-                        <?php }
+
+                        $sql_query = "select * from articles where article_category = ?";
+                        $conection_prepare = $conection_db->prepare($sql_query);
+                        $conection_prepare->bind_param("s", $article_category_sended);
+                        $conection_prepare->execute();
+                        $result = $conection_prepare->get_result();
+                        if ($result->num_rows > 0) {
+                            while ($article_content = $result->fetch_assoc()) {
+
+                                ?>
+
+                                <a href="article.php?article_id=<?php echo $iarticle_content["article_id"] ?>" cursor="pointer">
+                                    <article class="principal_articles" id="article">
+                                        <div class="principal_articles_tittle_date_box">
+                                            <h2 class="principal_articles_tittle">
+                                                <?php echo $article_content["article_name"]; ?>
+                                            </h2>
+                                            <p class="principal_articles_date">
+                                                <?php echo $article_content["article_date"]; ?>
+                                            </p>
+                                        </div>
+                                        <div class="principal_articles_description_box">
+                                            <p class="principal_articles_description">
+                                                <?php echo $article_content["article_description"] ?>
+                                            </p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                                <hr class="articles_line_division">
+                                <?php
+                            }
+
+                        }
+                        ;
+                    } else {
+
+
+                        $sql = "select * from articles";
+                        $query_sql_select_articles = $conection_db->query($sql);
+                        if ($query_sql_select_articles->num_rows > 0) {
+                            while ($info_articles = $query_sql_select_articles->fetch_assoc()) {
+
+                                ?>
+                                <a href="article.php?article_id=<?php echo $info_articles["article_id"] ?>" cursor="pointer">
+                                    <article class="principal_articles" id="article">
+                                        <div class="principal_articles_tittle_date_box">
+                                            <h2 class="principal_articles_tittle">
+                                                <?php echo $info_articles["article_name"]; ?>
+                                            </h2>
+                                            <p class="principal_articles_date">
+                                                <?php echo $info_articles["article_date"]; ?>
+                                            </p>
+                                        </div>
+                                        <div class="principal_articles_description_box">
+                                            <p class="principal_articles_description">
+                                                <?php echo $info_articles["article_description"] ?>
+                                            </p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                                <hr class="articles_line_division">
+                            <?php }
+                        }
+                        ;
                     } ?>
                 </section>
 
@@ -113,16 +162,16 @@ require_once "conection.php"
                         <div class="side_articles_box">
                             <nav class="articles_categories_nav">
                                 <div>
-                                    <a href="article.php?articles_categories=programacao">Programação</a>
+                                    <a href="blog.php?articles_categories=programacao">Programação</a>
                                     <hr class="articles_line_division">
                                 </div>
                                 <div>
-                                    <a href="article.php?articles_categories=musica">Música</a>
+                                    <a href="blog.php?articles_categories=musica">Música</a>
 
                                     <hr class="articles_line_division">
                                 </div>
                                 <div>
-                                    <a href="article.php?articles_categories=marketing">Marketing</a>
+                                    <a href="blog.php?articles_categories=marketing">Marketing</a>
                                     <hr class="articles_line_division">
                                 </div>
                             </nav>

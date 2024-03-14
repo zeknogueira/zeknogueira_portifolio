@@ -193,3 +193,10 @@ div{
     font-weight: bold;
     margin-bottom: 0.7vh;
 }
+
+.article_category_tittle{
+    font-size: 30px;
+    color: #20753F;
+    font-weight: bold;
+
+}
