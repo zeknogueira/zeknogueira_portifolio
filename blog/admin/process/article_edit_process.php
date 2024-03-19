@@ -1,5 +1,5 @@
 <?php
-require_once "conection.php";
+require "../../config/conection.php";
 
 
 $article_name = $_POST["article_name"];
@@ -20,20 +20,20 @@ if ($stmt) {
         $stmt->close();
         $conection_db->close();
 
-        header("Location: admin.php");
+        header("Location: ../admin.php");
         exit();
     } else {
 
         $stmt->close();
         $conection_db->close();
 
-        header("Location: article_edit.php?erro=1&article_id=$article_id_send");
+        header("Location: ../article_edit.php?erro=1&article_id=$article_id_send");
         exit();
     }
 } else {
     $conection_db->close();
 
-    header("Location: article_edit.php?erro=2&article_id=$article_id_send");
+    header("Location: ../article_edit.php?erro=2&article_id=$article_id_send");
     exit();
 }
 ?>

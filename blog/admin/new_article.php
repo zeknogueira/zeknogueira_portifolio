@@ -1,43 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php
-require_once "conection.php"
+require "../config/conection.php"
     ?>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Zek Nogueira</title>
 </head>
 
 <body class="white_body_blog">
-    <header id="small_header">
-        <div id="logo_blog">
-            <a href="index.php">
-                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
-            </a>
-        </div>
-
-
-        <div id="menu">
-
-            <nav id="principal_nav">
-
-                <a href="blog.php">Blog</a>
-                <a href="index.php">Serviços</a>
-                <a href="login.php"><button class="enter_button">Entrar</button></a>
-            </nav>
-        </div>
-
-    </header>
+    <?php include "../elements/header_pattern.php"; ?>
     <main class="admin_white_main">
         <div class="admin_principal_white_background_form_add">
             <h1>Adicionar Artigo</h1>
-            <form class="form_admin" action="new_article_process.php" method="POST">
+            <form class="form_admin" action="process/new_article_process.php" method="POST">
 
                 <label for="article_name">Nome</label>
                 <input type="text" id="article_name" name="article_name" placeholder="Nome do artigo" required>
@@ -70,13 +50,7 @@ require_once "conection.php"
 
 
     </main>
-
-    <footer id="footer_blog_principal">
-        <div>
-            <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="index.php">Zek Nogueira</a></p>
-        </div>
-
-    </footer>
+    <?php include "../elements/footer_pattern.php" ?>
 
 </body>
 

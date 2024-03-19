@@ -1,5 +1,5 @@
 <?php
-require "conection.php";
+require "../../config/conection.php";
 $sql = "DELETE from articles where article_id = ?";
 $article_id_send = $_POST["article_id"];
 
@@ -9,7 +9,7 @@ if ($stmt) {
     if ($stmt->execute()) {
         $stmt->close();
         $conection_db->close();
-        header("Location: admin.php");
+        header("Location: ../admin.php");
         exit();
 
     } else {
@@ -17,13 +17,13 @@ if ($stmt) {
         $stmt->close();
         $conection_db->close();
 
-        header("Location: admin.php?erro=1&article_id=$article_id_send");
+        header("Location: ../admin.php?erro=1&article_id=$article_id_send");
         exit();
     }
 } else {
     $conection_db->close();
 
-    header("Location: admin.php?erro=2&article_id=$article_id_send");
+    header("Location: ../admin.php?erro=2&article_id=$article_id_send");
     exit();
 }
 ?>

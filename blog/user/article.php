@@ -1,39 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php
-require_once "conection.php"
-    ?>
+require "../config/conection.php";
+
+?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/blog.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
     <title>Zek Nogueira</title>
 </head>
 
 <body class="white_body_blog">
-    <header id="small_header">
-    <div id="logo_blog">
-            <a href="blog.php">
-                <h1>ZEK<span id="zek_logo_blog">/Blog</span></h1>
-            </a>
-        </div>
-
-
-        <div id="menu">
-
-            <nav id="principal_nav">
-
-                <a href="blog.php">Blog</a>
-                <a href="index.php">Serviços</a>
-                <a href="login.php"><button class="enter_button">Entrar</button></a>
-            </nav>
-        </div>
-
-    </header>
+    <?php include "../elements/header_pattern.php"; ?>
     <main class="white_main_blog">
         <div class="space_between_header_articles">
 
@@ -42,7 +24,6 @@ require_once "conection.php"
             <div class="main_blog_principal">
                 <section class="articles_section">
                     <?php
-                    require "conection.php";
                     $article_id_send = $_GET['article_id'];
                     $sql = "SELECT * FROM articles WHERE article_id = ?";
                     $stmt = $conection_db->prepare($sql);
@@ -123,12 +104,7 @@ require_once "conection.php"
 
         </div>
     </main>
-    <footer id="footer_blog_principal">
-        <div>
-            <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="index.php">Zek Nogueira</a></p>
-        </div>
-
-    </footer>
+    <?php include "../elements/footer_pattern.php" ?>
 
 </body>
 

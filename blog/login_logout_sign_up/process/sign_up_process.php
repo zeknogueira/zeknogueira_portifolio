@@ -1,5 +1,5 @@
 <?php
-require_once "conection.php";
+require_once "../../config/conection.php";
 
 $user_name = $_POST["user_name"];
 $user_email = $_POST["user_email"];
@@ -10,14 +10,14 @@ if ($user_password == $confirm_user_password) {
     $result_insert_data = $conection_db->query($insert_user_in_db);
 
 } else {
-    header("Location:sing_up.php?error=1");
+    header("Location:../sing_up.php?error=1");
     exit();
 }
 if ($result_insert_data === TRUE) {
-    header("Location:login.php");
+    header("Location:../login.php");
     exit();
 } else {
-    header("Location:sign_up.php?error=2");
+    header("Location:../sign_up.php?error=2");
 }
 
 ?>

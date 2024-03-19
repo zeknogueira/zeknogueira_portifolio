@@ -1,5 +1,5 @@
 <?php
-require_once "conection.php";
+require "../../config/conection.php";
 
 // ...
 $article_name = $_POST["article_name"];
@@ -18,7 +18,7 @@ if ($stmt) {
         $stmt->close();
         $conection_db->close();
         
-        header("Location: admin.php");
+        header("Location: ../admin.php");
         exit(); 
     } else {
         

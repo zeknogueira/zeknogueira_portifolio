@@ -1,44 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php
-require_once "conection.php"
+require_once "../config/conection.php";
+
     ?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/login.css">
-    <title>Zek Nogueira</title>
+    <link rel="stylesheet" href="../../css/style.css">
+        <title>Zek Nogueira</title>
 </head>
 
 <body class="white_body_blog">
-    <header id="small_header">
-        <div id="logo_blog">
-            <a href="index.php">
-                <h1>ZEK<span id="zek_logo_blog">/login</span></h1>
-            </a>
-        </div>
-
-
-        <div id="menu">
-
-            <nav id="principal_nav">
-
-                <a href="blog.php">Blog</a>
-                <a href="index.php">Serviços</a>
-                
-            </nav>
-        </div>
-
-    </header>
+    <?php include "../elements/header_pattern.php"; ?>
     <main class="login_main">
         <div class="principal_login_box">
             <section id="margin_login_box">
                 <div class="box_login">
-                    <form action="login_process.php" method="POST" class="form_global_config">
+                    <form action="process/login_process.php" method="POST" class="form_global_config">
 
                         <div>
                             <label for="user_email">Email:</label>
@@ -69,7 +50,7 @@ require_once "conection.php"
     </main>
     <footer id="footer_blog_principal">
         <div>
-            <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="index.php">Zek Nogueira</a></p>
+            <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="../../index.php">Zek Nogueira</a></p>
         </div>
 
     </footer>

@@ -16,10 +16,7 @@
         </div>
         <div id="menu">
             <nav id="principal_nav">
-                <a href="blog.php">Blog</a>
-                <a href="contato.html">Contato</a>
-                <a href="Projetos">Projetos</a>
-                <a href="curriculo.html">Curriculo</a>
+                <a href="blog/user/blog.php">Blog</a>
             </nav>
         </div>
 
@@ -34,9 +31,9 @@
     </main>
     <footer id="footer_blog_principal">
         <div>
-            <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="index.html">Zek Nogueira</a></p>
+            <p>2023 &#169; Todos os direitos reservados | Desenvolvido por <a href="index.php">Zek Nogueira</a></p>
         </div>
-        
+
     </footer>
 
 </body>
